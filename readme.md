@@ -1,12 +1,14 @@
-Install deno:
+- Install deno:
 ```curl -fsSL https://deno.land/install.sh | sh```
 
-Install `Deno` VS Code extension by `denoland`
+- Run `deno install`
 
-```deno test``` or use the Extention UI test-runner (small green triangle).
+- Install `Deno` VS Code extension by `denoland`
+
+- Run ```deno test``` or use the Extention UI test-runner (small green triangle).
 
 
-To run tests with breakpoints, go to "Run and Debug" and add a run config like:
+- To run tests with breakpoints, go to "Run and Debug" and add a run config like:
 ```
 {
     // Use IntelliSense to learn about possible attributes.
