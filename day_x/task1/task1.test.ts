@@ -6,12 +6,12 @@ Deno.test("sample input gives correct output", async () => {
   const lines = await fileLinesToArray("day_x/shared/sample.txt")
 
   const answer = getAnswer(lines)
-  expect(answer).toBe(123)
+  expect(answer).toBe(1337)
 })
 
 Deno.test("real puzzle input gives correct output", async () => {
   const lines = await fileLinesToArray("day_x/shared/input.txt")
 
   const answer = getAnswer(lines)
-  expect(answer).toBe(123)
+  expect(answer).toBe(1337)
 })

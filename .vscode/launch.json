@@ -4,15 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-      
         {
           "request": "launch",
           "name": "Debug Deno Tests",
           "type": "node",
           // "program": "${workspaceFolder}/main.ts",
           "cwd": "${workspaceFolder}",
-          "env": {},
-          "runtimeExecutable": "~/.deno/bin/deno",
+          "runtimeExecutable": "/Users/bjorn/.deno/bin/deno", // <-- CHANGE THIS to your deno executable
           "runtimeArgs": [
             /* modified: was generated as "run", but you asked about testing */
             "test",
@@ -23,7 +21,7 @@
 
             /* disabled: allowing all permissions is unsafe: only allow
                 the specific permissions that your scripts need */
-            "--allow-all"
+            "--allow-read"
           ],
           "attachSimplePort": 9229
         }
