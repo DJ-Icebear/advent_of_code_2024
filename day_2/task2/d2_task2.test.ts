@@ -1,5 +1,5 @@
 import { expect } from "jsr:@std/expect"
-import { getAnswer, isDecreasing, isIncreasing, isSafe } from "./task1.ts";
+import { getAnswer, isDecreasing, isIncreasing, isSafe } from "./d2_task2.ts";
 import { fileLinesToArray } from "../../file_io/readFile.ts";
 
 Deno.test("isIncreasing returns true for increasing line", () => {
@@ -8,8 +8,21 @@ Deno.test("isIncreasing returns true for increasing line", () => {
   expect(isIncreasing(line)).toBe(true)
 })
 
+Deno.test("isIncreasing returns true for increasing line with one skip", () => {
+  const line = [1, 3, 2, 4, 5]
+
+  expect(isIncreasing(line)).toBe(true)
+})
+
 Deno.test("isIncreasing returns false for non-increasing line", () => {
   const line = [8, 6, 4, 4, 1]
+
+  expect(isIncreasing(line)).toBe(false)
+})
+
+Deno.test("isIncreasing returns false when gap too big", () => {
+  const line = [1, 2, 7, 8, 9]
+  console.log('running test...')
 
   expect(isIncreasing(line)).toBe(false)
 })
